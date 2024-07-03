@@ -1,0 +1,75 @@
+### Add Product
+POST http://localhost:8080/api/product
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Tshirt",
+  "type": "Pakaian",
+  "price": 50000
+}
+
+
+### Get Product
+#GET http://localhost:8080/api/product/{productId}
+GET http://localhost:8080/api/product/034ec30b401c41ec81fe8e54d58ddd98
+Accept: application/json
+
+
+### Get All Products
+GET http://localhost:8080/api/product/list
+Accept: application/json
+
+### Update User
+#PATCH http://localhost:8080/api/product/{productId}
+PATCH http://localhost:8080/api/product/1632f3c141434c518ae35ce4ab586c1e
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "T-shirt",
+  "type": "Pakaian",
+  "price": 50000
+}
+
+### Delete Product
+#DELETE http://localhost:8080/api/product/{productId}
+DELETE http://localhost:8080/api/product/c741506a463f407bb05d65ca9376e839
+Accept: application/json
+
+
+
+### Add Product to Cart
+POST http://localhost:8080/api/order/cart
+Accept: application/json
+Content-Type: application/json
+
+{
+  "productId": "08f923aeb49a45ea9eed4d9df07eb1b4",
+  "quantity": 3
+}
+
+### Get All Cart
+GET http://localhost:8080/api/order/cart/list
+Accept: application/json
+
+
+### Add Place Order
+POST http://localhost:8080/api/order
+Accept: application/json
+Content-Type: application/json
+
+{
+  "customerName": "Fando",
+  "customerAddress": "Bandung"
+}
+
+
+### Get Order by Cart ID
+#GET http://localhost:8080/api/order/{orderId}
+GET http://localhost:8080/api/order/2f6e63d7dd84494d9fab448e76d2848d
+Accept: application/json
+
+### Get All Orders
+GET http://localhost:8080/api/order/list
+Accept: application/json
